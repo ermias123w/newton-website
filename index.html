@@ -1,0 +1,956 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newton's Discoveries: Revolutionizing Physics</title>
+  <link rel="stylesheet" href="https://upload.wikimedia.org/wikipedia/commons/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg">
+  <style>
+    :root {
+      --primary: #001f3f;
+      --secondary: #0074D9;
+      --accent: #FF851B;
+      --light: #f0f4f8;
+      --dark: #111;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      margin: 0;
+      padding: 0;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), #003366);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    
+    header .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+    
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-top: 1rem;
+      border: 4px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+    }
+    
+    nav {
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      margin: 0 1.2rem;
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    
+    nav a i {
+      margin-right: 8px;
+    }
+    
+    nav a:hover {
+      background-color: var(--secondary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    section {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent), var(--secondary));
+    }
+    
+    h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+    
+    .law-card {
+      background-color: #f8f9fa;
+      border-left: 4px solid var(--secondary);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .law-card:hover {
+      transform: translateX(10px);
+      }
+    
+    .law-card h3 {
+      color: var(--primary);
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .law-card i {
+      margin-right: 10px;
+      color: var(--accent);
+    }
+    
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f4f8;
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 1.5rem auto;
+      max-width: 400px;
+      border-left: 4px solid var(--accent);
+    }
+    
+    .diagram {
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+    }
+    
+    .diagram img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .diagram img:hover {
+      transform: scale(1.02);
+    }
+    
+    .diagram-caption {
+      font-style: italic;
+      color: #666;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: var(--secondary);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--accent);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid white;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content::after {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 20px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid white;
+    }
+    
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--primary);
+      padding: 2rem;
+      margin: 2rem 0;
+      border-left: 4px solid var(--accent);
+      background-color: #f8f9fa;
+      position: relative;
+    }
+    
+    .quote::before, .quote::after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--secondary);
+      opacity: 0.3;
+      position: absolute;
+    }
+    
+    .quote::before {
+      top: 10px;
+      left: 10px;
+    }
+    
+    .quote::after {
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    .quote-author {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    
+    .interactive-demo {
+      background-color: #f0f4f8;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    .gravity-simulator {
+      width: 100%;
+      height: 300px;
+      background-color: var(--dark);
+      border-radius: 8px;
+      margin: 1rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+    
+    .sun {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle at 30% 30%, #FFD700, #FF8C00);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 20px #FFD700;
+      position: absolute;
+      z-index: 2;
+    }
+    
+    .orbit {
+      position: absolute;
+      border: 1px dashed rgba(255,255,255,0.3);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .resources {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .resource-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .resource-card h3 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+    
+    .resource-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .resource-card a:hover {
+      text-decoration: underline;
+    }
+    
+    footer {
+      background: linear-gradient(135deg, var(--primary), #003366);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+    }
+    
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      margin: 1.5rem 0;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: var(--accent);
+    }
+    
+    .copyright {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+    
+    /* Creator Badge Styles */
+    .creator-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 8px 12px 8px 8px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 2;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .creator-badge .creator-photo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: url('https://i.imgur.com/JQ9pGdW.png') center/cover;
+      margin-right: 8px;
+      border: 2px solid var(--accent);
+    }
+    
+    .creator-spotlight {
+      display: flex;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      align-items: center;
+    }
+    
+    .creator-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: url('https://i.imgur.com/JQ9pGdW.png') center/cover;
+      border: 4px solid white;
+      margin-right: 2rem;
+      flex-shrink: 0;
+    }
+    
+    .creator-info h3 {
+      margin-top: 0;
+      color: white;
+    }
+    
+    .creator-info p {
+      margin-bottom: 1rem;
+    }
+    
+    .creator-signature img {
+      height: 40px;
+      opacity: 0.9;
+    }
+    
+    .social-icons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+    
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    
+    .social-icons a i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+    
+    .project-credits {
+      margin: 2rem 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      .project-credits h4 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .version {
+      font-family: monospace;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+    
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .copyright strong {
+      color: var(--accent);
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+    
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.1rem;
+      }
+      
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+      }
+      
+      section {
+        padding: 1.5rem;
+      }
+      
+      .timeline::before {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content::after,
+      .timeline-item:nth-child(even) .timeline-content::after {
+        left: -10px;
+        border-right: 10px solid white;
+        border-left: 0;
+      }
+      
+      .creator-spotlight {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .creator-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .social-icons {
+        grid-template-columns: 1fr;
+      }
+      
+      .creator-badge {
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="creator-badge">
+        <div class="creator-photo"></div>
+        <span>Passion Project by Ermias Wondimu</span>
+      </div>
+      <h1 class="animate">Isaac Newton's Scientific Revolution</h1>
+      <p class="subtitle animate delay-1">Discover how one man's curiosity changed our understanding of the universe</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg" 
+           alt="Portrait of Isaac Newton" class="animate delay-2">
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#motion"><i class="fas fa-rocket"></i> Motion</a>
+      <a href="#gravity"><i class="fas fa-globe-europe"></i> Gravity</a>
+      <a href="#impact"><i class="fas fa-atom"></i> Impact</a>
+      <a href="#works"><i class="fas fa-book"></i> Works</a>
+      <a href="#about"><i class="fas fa-user"></i> Biography</a>
+      <a href="#legacy"><i class="fas fa-history"></i> Legacy</a>
+    </div>
+  </nav>
+
+  <section id="motion" class="animate">
+    <h2>The Laws That Govern Motion</h2>
+    <p>Newton's three laws of motion form the foundation of classical mechanics, explaining the relationship between a body and the forces acting upon it.</p>
+    
+    <div class="law-card">
+      <h3><i class="fas fa-couch"></i> First Law: Law of Inertia</h3>
+      <p>An object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an unbalanced force.</p>
+      <p><strong>Example:</strong> When a car stops suddenly, passengers continue moving forward (inertia) until the seatbelt applies a force to stop them.</p>
+    </div>
+    
+    <div class="law-card">
+      <p>The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.</p>
+      <div class="formula">F = m × a</div>
+      <p><strong>Example:</strong> It takes more force to accelerate a loaded truck than an empty one because the loaded truck has greater mass.</p>
+    </div>
+    
+    <div class="law-card">
+      <h3><i class="fas fa-exchange-alt"></i> Third Law: Action-Reaction</h3>
+      <p>For every action, there is an equal and opposite reaction.</p>
+      <p><strong>Example:</strong> When you push against a wall, the wall pushes back with equal force. Rockets work by expelling gas downward, which pushes the rocket upward.</p>
+    </div>
+    
+    <div class="diagram">
+      <img src="https://teachengineering.org/content/cub_/lessons/cub_mechanics/cub_mechanics_lesson04_header_image_new.jpg" alt="Newton's Laws Diagram">
+      <p class="diagram-caption">Visual representation of Newton's three laws of motion</p>
+    </div>
+  </section>
+
+  <section id="gravity" class="animate delay-1">
+    <h2>Universal Gravitation</h2>
+    <p>Newton's law of universal gravitation revolutionized astronomy by providing a mathematical explanation for planetary motion.</p>
+    
+    <div class="quote">
+      "Gravity explains the motions of the planets, but it cannot explain who set the planets in motion."
+      <div class="quote-author">— Isaac Newton</div>
+    </div>
+    
+    <p>Newton proposed that every mass attracts every other mass with a force proportional to the product of their masses and inversely proportional to the square of the distance between them:</p>
+    
+    <div class="formula">F = G × (m₁ × m₂) / r²</div>
+    
+    <p>Where:
+      <ul>
+        <li>F is the gravitational force between two objects</li>
+        <li>G is the gravitational constant (6.674×10⁻¹¹ N·(m/kg)²)</li>
+        <li>m₁ and m₂ are the masses of the objects</li>
+        <li>r is the distance between their centers</li>
+      </ul>
+    </p>
+    
+    <div class="interactive-demo">
+      <h3>Gravity Simulator</h3>
+      <p>Visualize how gravitational force works between celestial bodies</p>
+      <div class="gravity-simulator">
+        <div class="sun"></div>
+        <div class="orbit" style="width: 200px; height: 200px;"></div>
+        <div class="orbit" style="width: 300px; height: 300px;"></div>
+        <div class="planet" style="width: 20px; height: 20px; top: 50%; left: calc(50% + 100px);"></div>
+        <div class="planet" style="width: 30px; height: 30px; top: 50%; left: calc(50% + 150px);"></div>
+      </div>
+      <button id="start-orbit" style="padding: 0.5rem 1rem; background-color: var(--secondary); color: white; border: none; border-radius: 4px; cursor: pointer;">Start Simulation</button>
+    </div>
+    
+    <div class="diagram">
+      <img src="https://www.shutterstock.com/image-vector/newtons-law-universal-gravitation-earth-260nw-2200074947.jpg" alt="Universal Gravitation Diagram">
+      <p class="diagram-caption">Newton's law of universal gravitation visualized</p>
+    </div>
+  </section>
+
+  <section id="impact" class="animate delay-2">
+    <h2>Revolutionary Impact</h2>
+    <p>Newton's discoveries fundamentally changed how we understand the physical world and laid the foundation for modern physics and engineering.</p>
+    
+    <h3>Key Contributions:</h3>
+    <ul>
+      <li><strong>Celestial Mechanics:</strong> Explained planetary motion and cometary orbits</li>
+      <li><strong>Tides:</strong> Showed how the Moon's gravity creates ocean tides</li>
+      <li><strong>Engineering:</strong> Enabled calculation of forces in structures and machines</li>
+      <li><strong>Space Exploration:</strong> Essential for calculating rocket trajectories and satellite orbits</li>
+      <li><strong>Mathematics:</strong> Developed calculus (simultaneously with Leibniz) to solve physics problems</li>
+      <div class="diagram">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_T-XoddOODVmcKdKPwb8G4MNnnmrGBSGgg&s" alt="Gravity in Action">
+      <p class="diagram-caption">Gravitational forces between Earth and Moon</p>
+    </div>
+    
+    <div class="quote">
+      "If I have seen further, it is by standing on the shoulders of giants."
+      <div class="quote-author">— Isaac Newton (in a letter to Robert Hooke)</div>
+    </div>
+  </section>
+
+  <section id="works" class="animate">
+    <h2>Original Works</h2>
+    <p>Newton's publications transformed scientific thought and established the foundation of classical physics.</p>
+    
+    <div class="resources">
+      <div class="resource-card">
+        <h3>Principia Mathematica</h3>
+        <p><strong>Published:</strong> 1687</p>
+        <a href="https://www.newtonproject.ox.ac.uk" target="_blank">Explore the Principia →</a>
+      </div>
+      
+      <div class="resource-card">
+        <h3>Opticks</h3>
+        <p><strong>Published:</strong> 1704</p>
+        <p>Newton's work on the nature of light and color, including his famous prism experiments.</p>
+        <a href="https://archive.org/details/opticksoratreati00newt" target="_blank">Read Opticks →</a>
+      </div>
+      
+      <div class="resource-card">
+        <h3>Method of Fluxions</h3>
+        <p><strong>Written:</strong> 1671</p>
+        <p>Newton's development of calculus (called "fluxions"), though published much later.</p>
+        <a href="https://www.mathpages.com/home/kmath103/kmath103.htm" target="_blank">Learn about Fluxions →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="animate delay-1">
+    <h2>Biography</h2>
+    <p>Isaac Newton (1643–1727) was an English mathematician, physicist, astronomer, alchemist, theologian, and author who is widely recognized as one of the greatest mathematicians and most influential scientists of all time.</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1643</div>
+          <p>Born prematurely on January 4 in Woolsthorpe, Lincolnshire, England. His father had died three months earlier.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1661</div>
+          <p>Entered Trinity College, Cambridge, where he studied Aristotle's work but became fascinated by modern philosophers like Descartes.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1665-1666</div>
+          <p>"Annus mirabilis" (miracle year) when Cambridge closed due to plague. Developed theories of calculus, optics, and gravitation.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1687</div>
+          <p>Published <em>Philosophiæ Naturalis Principia Mathematica</em>, establishing classical mechanics.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1703</div>
+          <p>Became President of the Royal Society, a position he held until his death.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">1727</div>
+          <p>Died in London on March 31 and was buried in Westminster Abbey with great honors.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="diagram">
+      <img src="https://media.sciencephoto.com/c0/45/09/15/c0450915-800px-wm.jpg" alt="Newton's Birthplace">
+      <p class="diagram-caption">Woolsthorpe Manor, Newton's birthplace where he developed his early theories</p>
+    </div>
+  </section>
+
+  <section id="legacy" class="animate delay-2">
+    <h2>Enduring Legacy</h2>
+    <p>Newton's work continues to influence science and technology centuries after his death.</p>
+    
+    <h3>Modern Applications:</h3>
+    <ul>
+      <li><strong>Space Exploration:</strong> NASA and other space agencies use Newton's laws for spacecraft navigation</li>
+      <li><strong>Engineering:</strong> Essential for designing vehicles, buildings, and machines</li>
+      <li><strong>Physics Education:</strong> Still the foundation of introductory physics courses worldwide</li>
+      </ul>
+    
+    <div class="quote">
+      "Nature and nature's laws lay hid in night;<br>
+      God said 'Let Newton be' and all was light."
+      <div class="quote-author">— Alexander Pope (Epitaph intended for Newton)</div>
+    </div>
+    
+    <div class="diagram">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLjtE0FD3pFhXj2xcUuUd7l9PVySsCWIuAw&s" alt="Newton by William Blake">
+      <p class="diagram-caption">Newton as depicted by William Blake, representing the scientific revolution</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="creator-spotlight">
+        <div class="creator-image"></div>
+        <div class="creator-info">
+          <h3>About the Creator</h3>
+          <p>This tribute was crafted with passion by Ermias Wondimu, a science enthusiast dedicated to making complex ideas accessible to everyone.</p>
+          <div class="creator-signature">
+            <img src="https://i.imgur.com/JQ9pGdW.png" alt="Ermias Wondimu's Signature">
+          </div>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <h4>Connect with the Creator</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-github"></i> ermias123w</a>
+          <a href="ermiaswondimu6@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+      
+      <div class="project-credits">
+        <h4>Project Details</h4>
+        <p>This educational resource was developed over 120 hours of research and design</p>
+        <p>Special thanks to the Newton Project at Oxford University</p>
+        <div class="version">Version 2.0 • Updated July 2025</div>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2025 <strong>Newton's Legacy Project</strong> by Ermias Wondimu</p>
+        <p>All content created with academic integrity and passion for science education</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fixed gravity simulator with sun and single-click functionality
+    document.getElementById('start-orbit').addEventListener('click', function() {
+      const btn = this;
+      btn.disabled = true;
+      btn.textContent = "Simulation Running...";
+      
+      const planets = document.querySelectorAll('.planet');
+      let angle = 0;
+      let animationId;
+      
+      function animateOrbits() {
+        angle += 0.01;
+        
+        planets[0].style.top = calc(50% + ${Math.sin(angle) * 100}px);
+        planets[0].style.left = calc(50% + ${Math.cos(angle) * 100}px);
+        
+        planets[1].style.top = calc(50% + ${Math.sin(angle * 0.7) * 150}px);
+        planets[1].style.left = calc(50% + ${Math.cos(angle * 0.7) * 150}px);
+        
+        animationId = requestAnimationFrame(animateOrbits);
+      }
+      
+      animateOrbits();
+      
+      // Stop animation when button is clicked again (though it's now disabled)
+      btn.addEventListener('click', function() {
+        cancelAnimationFrame(animationId);
+        btn.disabled = false;
+        btn.textContent = "Start Simulation";
+      }, { once: true });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Add animation to elements when they come into view
+    const observer = new IntersectionObserver((entries) => {
+if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
